@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lakshminarayanan — Architectural Designer & Site Architect portfolio. Architecture, interior design, construction coordination and 3D visualization.">
+<title>Lakshminarayanan | Architectural Designer & Site Architect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f4f0;--ink:#171717;--muted:#696969;--line:#dedbd3;--card:#fff;--accent:#a48b6a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.container{width:min(1180px,92%);margin:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(245,244,240,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(222,219,211,.75)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:Manrope;font-weight:800;letter-spacing:-.04em;font-size:18px}.brand span{font-weight:500;color:var(--muted)}
+nav{display:flex;gap:28px;font-size:13px;font-weight:600}nav a{opacity:.72}nav a:hover{opacity:1}
+.menu{display:none;border:0;background:none;font-size:24px}
+.hero{min-height:100vh;display:grid;align-items:center;padding:120px 0 70px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:var(--muted);font-weight:700}
+h1,h2,h3{font-family:Manrope;margin:0;letter-spacing:-.045em}h1{font-size:clamp(52px,7vw,92px);line-height:.95;margin:18px 0 28px}.hero p{font-size:18px;color:var(--muted);max-width:600px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.btn{padding:14px 20px;border:1px solid var(--ink);font-weight:700;font-size:13px;display:inline-flex;align-items:center;gap:8px}.btn.primary{background:var(--ink);color:white}.btn:hover{transform:translateY(-2px)}
+.hero-card{aspect-ratio:4/5;background:#ddd;position:relative;overflow:hidden}.hero-card img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.82)}.hero-card .tag{position:absolute;bottom:18px;left:18px;background:rgba(255,255,255,.9);padding:10px 13px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+section{padding:105px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}.section-head h2{font-size:clamp(36px,5vw,58px)}.section-head p{max-width:430px;color:var(--muted);margin:0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.lead{font-size:24px;line-height:1.35;font-family:Manrope}.muted{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:38px}.stat{padding:22px 10px 22px 0}.stat strong{font:800 30px Manrope;display:block}.stat span{font-size:12px;color:var(--muted)}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}.skill{padding:17px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:14px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.filter{border:1px solid var(--line);background:transparent;padding:9px 13px;font-size:12px;cursor:pointer}.filter.active,.filter:hover{background:var(--ink);color:white;border-color:var(--ink)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{background:#ddd;aspect-ratio:4/3;overflow:hidden;position:relative;cursor:pointer}.project img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.project:hover img{transform:scale(1.04)}.project .caption{position:absolute;inset:auto 12px 12px 12px;background:rgba(255,255,255,.92);padding:11px 13px;font-size:12px;font-weight:700}
+.timeline{border-top:1px solid var(--line)}.job{display:grid;grid-template-columns:190px 1fr;gap:45px;padding:30px 0;border-bottom:1px solid var(--line)}.date{font-size:12px;color:var(--muted);font-weight:700}.job h3{font-size:24px;margin-bottom:4px}.job .company{font-size:13px;color:var(--muted);margin-bottom:12px}.job ul{margin:0;padding-left:18px;color:#555}
+.contact{background:var(--ink);color:white}.contact .muted{color:#aaa}.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px}.contact h2{font-size:clamp(45px,6vw,75px);line-height:.98}.contact-list{display:grid;gap:14px;align-content:end}.contact-item{border-bottom:1px solid #383838;padding:14px 0}.contact-item small{display:block;color:#888;text-transform:uppercase;letter-spacing:.12em;font-size:9px;margin-bottom:4px}
+footer{padding:25px 0;font-size:12px;color:var(--muted);display:flex;justify-content:space-between}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:50;display:none;align-items:center;justify-content:center;padding:30px}.modal.show{display:flex}.modal-inner{max-width:1100px;width:100%;position:relative}.modal img{max-height:80vh;width:100%;object-fit:contain}.close{position:absolute;right:0;top:-40px;color:white;background:none;border:0;font-size:28px;cursor:pointer}
+@media(max-width:800px){nav{display:none}.menu{display:block}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding-top:110px}.hero-card{max-height:560px}.gallery{grid-template-columns:1fr 1fr}.job{grid-template-columns:1fr;gap:5px}.stats{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:14px}}
+@media(max-width:520px){.gallery{grid-template-columns:1fr}.skills{grid-template-columns:1fr}section{padding:75px 0}footer{display:block}.hero p{font-size:16px}}
+</style>
+</head>
+<body>
+<header><div class="container nav"><a class="brand" href="#home">LAKSHMINARAYANAN <span>/ ARCHITECT</span></a><button class="menu" aria-label="Menu">☰</button><nav><a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav></div></header>
+
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+<div><div class="eyebrow">Architectural Designer / Site Architect</div><h1>Designing spaces.<br>Building ideas.</h1><p>Architecture, interior design, construction coordination and site execution — presented through a practical, detail-driven approach.</p><div class="actions"><a class="btn primary" href="#projects">View selected work ↗</a><a class="btn" href="assets/Lakshminarayanan-CV.pdf" download>Download CV ↓</a></div></div>
+<div class="hero-card" id="heroImage"><div class="tag">Architecture · Interior · Construction</div></div>
+</div></section>
+
+<section id="about"><div class="container"><div class="section-head"><h2>About</h2><p>A professional profile built around design development, technical documentation, multidisciplinary coordination and construction delivery.</p></div>
+<div class="about-grid"><div><p class="lead">Junior Architect and Site Architect with experience across residential, commercial, government and OBO construction projects.</p><p class="muted">Experienced in architectural design, construction documentation, site supervision, QA/QC inspections, shop drawing review, IFC drawing interpretation, RFIs, MIRs, MRFs, material submittals, quantity take-offs and construction progress monitoring.</p>
+<div class="stats"><div class="stat"><strong>10+</strong><span>Years experience</span></div><div class="stat"><strong>4</strong><span>Career stages</span></div><div class="stat"><strong>3D</strong><span>Visualization workflow</span></div></div></div>
+<div><div class="eyebrow">Core capabilities</div><div class="skills"><div class="skill">Architectural Site Supervision</div><div class="skill">Construction Management</div><div class="skill">IFC Drawing Interpretation</div><div class="skill">Shop Drawing Review</div><div class="skill">QA / QC Inspection</div><div class="skill">RFI / MIR / MRF Documentation</div><div class="skill">Material Submittals</div><div class="skill">Quantity Take-Off</div><div class="skill">CAD Drafting</div><div class="skill">Design Development</div><div class="skill">AutoCAD</div><div class="skill">SketchUp / Enscape / Lumion</div></div></div></div></div></section>
+
+<section id="projects"><div class="container"><div class="section-head"><h2>Selected work</h2><p>Project imagery from the uploaded portfolio package. Click an image to view it larger.</p></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="Architecture & Interior">Architecture & Interior</button></div><div class="gallery" id="gallery"></div></div></section>
+
+<section id="experience"><div class="container"><div class="section-head"><h2>Experience</h2><p>Professional experience and responsibilities based on the supplied CV.</p></div><div class="timeline">
+<div class="job"><div class="date">10/2025 — PRESENT</div><div><h3>Site Architect — OBO (U.S. Embassy) Construction Project</h3><div class="company">RA International General Trading L.L.C · Maldives</div><ul><li>Manage architectural site activities in accordance with IFC drawings, shop drawings, project specifications and OBO quality standards.</li><li>Coordinate architectural, structural, MEP and specialty subcontractors to identify and resolve site issues.</li><li>Review technical submittals, RFIs, MIRs and MRFs and coordinate required technical information.</li><li>Conduct QA/QC inspections, site measurements, quantity take-offs and construction progress monitoring.</li></ul></div></div>
+<div class="job"><div class="date">06/2023 — 09/2025</div><div><h3>Senior Architect</h3><div class="company">Oxico Homes LLP · Thiruvananthapuram, Kerala, India</div><ul><li>Led architectural design and execution for residential and commercial projects.</li><li>Prepared design concepts, construction drawings, layouts and technical documentation.</li><li>Coordinated with engineers, contractors and consultants and supported project delivery.</li></ul></div></div>
+<div class="job"><div class="date">09/2016 — 10/2022</div><div><h3>Junior Architect</h3><div class="company">The Graphite Divine Homes · Thiruvananthapuram, India</div><ul><li>Assisted with design development for residential and commercial architectural projects.</li><li>Prepared 2D architectural drawings, construction documents and detailed layouts using AutoCAD.</li><li>Created 3D models and visual presentations using SketchUp and coordinated project execution.</li></ul></div></div>
+<div class="job"><div class="date">08/2015 — 07/2016</div><div><h3>Site Engineer — Central Government Projects</h3><div class="company">Thirupathi Construction · Tamil Nadu, India</div><ul><li>Supervised government construction projects through site inspections, drawing review, contractor coordination, quality and safety monitoring, quantity verification and progress reporting.</li></ul></div></div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="container contact-grid"><div><div class="eyebrow">Let's work together</div><h2>Have a project<br>in mind?</h2><p class="muted">Available for international architecture, interior design, site architecture and construction opportunities.</p></div><div class="contact-list">
+<a class="contact-item" href="mailto:lakramachandran@gmail.com"><small>Email</small>lakramachandran@gmail.com</a>
+<a class="contact-item" href="tel:+917994181630"><small>Phone</small>+91 7994181630</a>
+<a class="contact-item" href="https://www.linkedin.com/in/lakshminarayanan-undefined-21a2853b3" target="_blank"><small>LinkedIn</small>View professional profile ↗</a>
+<a class="contact-item" href="assets/Lakshminarayanan-CV.pdf" download><small>CV</small>Download PDF ↓</a>
+</div></div></section>
+</main>
+<footer><div class="container"><span>© 2026 Lakshminarayanan</span><span>Architectural Designer · Site Architect</span></div></footer>
+
+<div class="modal" id="modal"><div class="modal-inner"><button class="close" id="close">×</button><img id="modalImg" alt="Project preview"></div></div>
+
+<script>
+const projects = [{src:"assets/projects/project-1.jpg", title:"Selected Project 1", category:"Architecture & Interior"},
+{src:"assets/projects/project-10.jpg", title:"Selected Project 2", category:"Architecture & Interior"},
+{src:"assets/projects/project-11.jpg", title:"Selected Project 3", category:"Architecture & Interior"},
+{src:"assets/projects/project-12.jpg", title:"Selected Project 4", category:"Architecture & Interior"},
+{src:"assets/projects/project-13.jpg", title:"Selected Project 5", category:"Architecture & Interior"},
+{src:"assets/projects/project-14.jpg", title:"Selected Project 6", category:"Architecture & Interior"},
+{src:"assets/projects/project-15.jpg", title:"Selected Project 7", category:"Architecture & Interior"},
+{src:"assets/projects/project-16.jpg", title:"Selected Project 8", category:"Architecture & Interior"},
+{src:"assets/projects/project-17.jpg", title:"Selected Project 9", category:"Architecture & Interior"},
+{src:"assets/projects/project-18.jpg", title:"Selected Project 10", category:"Architecture & Interior"},
+{src:"assets/projects/project-19.jpg", title:"Selected Project 11", category:"Architecture & Interior"},
+{src:"assets/projects/project-2.jpg", title:"Selected Project 12", category:"Architecture & Interior"},
+{src:"assets/projects/project-20.jpg", title:"Selected Project 13", category:"Architecture & Interior"},
+{src:"assets/projects/project-3.jpg", title:"Selected Project 14", category:"Architecture & Interior"},
+{src:"assets/projects/project-4.jpg", title:"Selected Project 15", category:"Architecture & Interior"},
+{src:"assets/projects/project-5.jpg", title:"Selected Project 16", category:"Architecture & Interior"},
+{src:"assets/projects/project-6.jpg", title:"Selected Project 17", category:"Architecture & Interior"},
+{src:"assets/projects/project-7.jpg", title:"Selected Project 18", category:"Architecture & Interior"},
+{src:"assets/projects/project-8.jpg", title:"Selected Project 19", category:"Architecture & Interior"},
+{src:"assets/projects/project-9.jpg", title:"Selected Project 20", category:"Architecture & Interior"}];
+const gallery = document.getElementById("gallery");
+const heroImage = document.getElementById("heroImage");
+if(projects.length){heroImage.insertAdjacentHTML("afterbegin", `<img src="${projects[0].src}" alt="Architectural project">`);}
+function render(filter="all"){
+  gallery.innerHTML = projects.filter(p=>filter==="all"||p.category===filter).map((p,i)=>`<article class="project" data-src="${p.src}"><img src="${p.src}" alt="${p.title}" loading="lazy"><div class="caption">${p.title} · ${p.category}</div></article>`).join("");
+  document.querySelectorAll(".project").forEach(el=>el.onclick=()=>{document.getElementById("modalImg").src=el.dataset.src;document.getElementById("modal").classList.add("show")});
+}
+render();
+document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(b.dataset.filter)});
+document.getElementById("close").onclick=()=>document.getElementById("modal").classList.remove("show");
+document.getElementById("modal").onclick=e=>{if(e.target.id==="modal")e.currentTarget.classList.remove("show")};
+document.querySelector(".menu").onclick=()=>{const n=document.querySelector("nav");n.style.display=n.style.display==="flex"?"none":"flex";n.style.position="absolute";n.style.right="4%";n.style.top="70px";n.style.background="var(--bg)";n.style.padding="20px";n.style.flexDirection="column";n.style.border="1px solid var(--line)"};
+</script>
+</body></html>

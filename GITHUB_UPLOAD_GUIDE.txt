@@ -1,0 +1,9 @@
+GITHUB-READY WEBSITE
+
+1. Extract this ZIP.
+2. Create a GitHub repository.
+3. Upload the contents of this folder.
+4. Keep index.html in the repository root.
+5. Enable Settings > Pages > Deploy from branch > main > / (root).
+
+The project images have been resized/compressed for web use to avoid GitHub browser upload limits.
